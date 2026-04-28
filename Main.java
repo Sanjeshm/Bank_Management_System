@@ -26,6 +26,7 @@ public class Main {
         }
 
         Account current = customer.getAccount(accNo);
+        MiniStatement ms = new MiniStatement();
 
         System.out.println("Login Successful");
 
@@ -42,11 +43,15 @@ public class Main {
 
             if (ch == 5) break;
 
+            if(ch == 4){
+                ms.generate();
+                continue;
+            }
+
             System.out.print("Enter amount: ");
             double amt = sc.nextDouble();
 
             Transaction t = null;
-            MiniStatement ms = new MiniStatement();
 
             switch (ch) {
                 case 1:
@@ -69,9 +74,7 @@ public class Main {
 
                     t = new Transaction(current, toAcc, amt, "TRANSFER");
                     break;
-                case 4:
-                	ms.generate();
-                	break;
+                
                 	
                 default:
                     System.out.println("Invalid choice");
