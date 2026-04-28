@@ -2,94 +2,94 @@ Problem Statement:
 
 Develop a console-based banking system that allows users to:
 
--> Create and manage bank accounts
+   -> Create and manage bank accounts
 
--> Perform transactions such as deposit, withdrawal, and transfer
+   -> Perform transactions such as deposit, withdrawal, and transfer
 
--> Authenticate users securely using account number and PIN
+   -> Authenticate users securely using account number and PIN
 
--> View transaction history using a mini statement
+   -> View transaction history using a mini statement
 
 
 Logic Used:
 
 1. Object-Oriented Design
 
-The system is built using core OOP principles:
+      The system is built using core OOP principles:
 
-~ Account -> Handles balance operations (deposit, withdraw)
+      ~ Account -> Handles balance operations (deposit, withdraw)
 
-~ Customer -> Manages multiple accounts and authentication
+      ~ Customer -> Manages multiple accounts and authentication
 
-~ Bank -> Responsible for account creation and closure
+      ~ Bank -> Responsible for account creation and closure
 
-~Transaction -> Executes and records transactions with status and timestamp
+      ~Transaction -> Executes and records transactions with status and timestamp
 
-~MiniStatement -> Stores and displays transaction history
+      ~MiniStatement -> Stores and displays transaction history
 
 
 2. Transaction Handling
 
-Transactions are executed through a dedicated Transaction class to ensure clean separation of logic.
+      Transactions are executed through a dedicated Transaction class to ensure clean separation of logic.
 
-Each transaction contains:
+      Each transaction contains:
 
-~ Transaction ID
+      ~ Transaction ID
 
-~ Type (Deposit / Withdraw / Transfer)
+      ~ Type (Deposit / Withdraw / Transfer)
 
-~ Amount
+      ~ Amount
 
-~ Status (Success / Failed)
+      ~ Status (Success / Failed)
 
-~ Timestamp
+      ~ Timestamp
 
 
 3. Authentication
 
-Users must enter:
+      Users must enter:
 
-~ Account Number
+      ~ Account Number
 
-~ PIN
+      ~ PIN
 
-Access is granted only if credentials match stored account data.
+      Access is granted only if credentials match stored account data.
 
 4. Mini Statement Feature
 
-All successful transactions are stored.
+      All successful transactions are stored.
 
-generate() method displays complete transaction history.
+      generate() method displays complete transaction history.
 
 Steps to Execute the Code:
 
-1. Clone the repository
+   1. Clone the repository
    
      git clone https://github.com/Sanjeshm/Bank_Management_System.git
    
      cd Bank_Management_System
 
-2. Compile the Java files
+   2. Compile the Java files
    
      javac *.java
 
-3. Run the application
+   3. Run the application
    
      java Main
 
-4.Usage Flow
+   4.Usage Flow
 
-  ~ Enter Account Number
+     ~ Enter Account Number
   
-  ~ Enter PIN
+     ~ Enter PIN
   
-  ~ Choose from options:
+     ~ Choose from options:
   
-      -> Deposit
+         -> Deposit
       
-      -> Withdraw
+         -> Withdraw
       
-      -> Transfer
+         -> Transfer
       
-      -> View Mini Statement
+         -> View Mini Statement
       
